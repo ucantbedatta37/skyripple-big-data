@@ -1,0 +1,10 @@
+# Custom spark-client image: apache/spark:3.5.1 + numpy (required by pyspark.ml / MinHashLSH)
+FROM apache/spark:3.5.1
+
+USER root
+
+# Install dependencies using the Python bundled with the Spark image
+RUN python3 -m pip install --no-cache-dir "numpy<2" matplotlib pandas
+
+# Switch back to default spark user
+USER spark
