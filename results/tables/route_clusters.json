@@ -1,0 +1,17 @@
+{
+    "Cluster_0_ShortHaul_Hub": [
+        "ORD-DTW",
+        "ATL-MCO",
+        "DFW-IAH"
+    ],
+    "Cluster_1_LongHaul_Coastal": [
+        "LAX-JFK",
+        "SFO-EWR",
+        "SEA-BOS"
+    ],
+    "Cluster_2_Regional_Biz": [
+        "BOS-LGA",
+        "DCA-NYC",
+        "SFO-LAX"
+    ]
+}

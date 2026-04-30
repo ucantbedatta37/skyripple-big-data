@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Delay Propagation Hubs</title>
+    <!-- Google Fonts - Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Globe.gl Library -->
+    <script src="//unpkg.com/globe.gl"></script>
+    <style>
+        :root {
+            --bg-color: #0d0d12;
+            --card-bg: rgba(26, 26, 36, 0.7);
+            --accent-color: #3b82f6;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            overflow: hidden;
+        }
+
+        #globeViz {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .header {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            margin: 4px 0 0 0;
+            font-size: 1rem;
+            color: var(--text-dim);
+            max-width: 500px;
+            line-height: 1.5;
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 10;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 16px;
+            max-width: 300px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .controls h2 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 0 12px 0;
+            color: var(--text-dim);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+        }
+
+        .color-box {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+
+        .airport-info {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            z-index: 10;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            display: none;
+            min-width: 180px;
+        }
+
+        .airport-info h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--accent-color);
+        }
+
+        .airport-info .stat {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            font-size: 0.9rem;
+        }
+
+        .airport-info .stat span:first-child {
+            color: var(--text-dim);
+        }
+
+        /* Micro-animations */
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="badge">GraphX Analytics Engine V1.0</div>
+        <h1>Global Hub Centrality</h1>
+        <p>Interactive visualization of airport delay propagation using weighted PageRank and Connected Components.</p>
+    </div>
+
+    <div id="globeViz"></div>
+
+    <div class="controls">
+        <h2>Visual Key</h2>
+        <div class="legend-item">
+            <div class="color-box" style="background: #3b82f6; width: 4px; height: 30px; border-radius: 10px;"></div>
+            <span><strong>Bar Height:</strong> Weighted PageRank score (influence)</span>
+        </div>
+        <div class="legend-item" style="margin-top: 15px;">
+            <span><strong>Colors:</strong> Represent structural clusters (Connected Components) found in the airport network.</span>
+        </div>
+    </div>
+
+    <div id="airportInfo" class="airport-info">
+        <h3 id="info-name">Airport Name</h3>
+        <div class="stat">
+            <span>PageRank:</span>
+            <b id="info-rank">0.00</b>
+        </div>
+        <div class="stat">
+            <span>Cluster ID:</span>
+            <b id="info-cluster">0</b>
+        </div>
+    </div>
+
+    <script>
+        // Preset colors for clusters
+        const COLORS = [
+            '#3b82f6', // blue
+            '#10b981', // green
+            '#f59e0b', // orange
+            '#ef4444', // red
+            '#8b5cf6', // purple
+            '#ec4899', // pink
+            '#06b6d4', // cyan
+            '#f43f5e'  // rose
+        ];
+
+        const world = Globe()
+            (document.getElementById('globeViz'))
+            .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-night.jpg')
+            .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
+            .backgroundImageUrl('https://unpkg.com/three-globe/example/img/night-sky.png')
+            .hexBinPointLat(d => d.lat)
+            .hexBinPointLng(d => d.lng)
+            .hexBinPointWeight(d => d.pagerank)
+            .hexAltitude(d => Math.pow(d.sumWeight, 0.4) * 0.1)
+            .hexBinResolution(3)
+            .hexTopColor(d => COLORS[d.points[0].component_id % COLORS.length])
+            .hexSideColor(d => COLORS[d.points[0].component_id % COLORS.length])
+            .hexLabel(d => `
+                <div style="background: rgba(0,0,0,0.8); padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2)">
+                    <b style="color: #3b82f6">${d.points[0].airport}</b><br/>
+                    PageRank: <b>${d.sumWeight.toFixed(4)}</b><br/>
+                    Cluster: <b>${d.points[0].component_id}</b>
+                </div>
+            `);
+
+        // Load data from generated JSON
+        fetch('results.json')
+            .then(res => res.json())
+            .then(data => {
+                // Filter out airports with 0,0 coordinates
+                const filteredData = data.filter(d => d.lat !== 0 || d.lng !== 0);
+                
+                // Set the data on the globe
+                world.hexBinPointsData(filteredData);
+                
+                // Initial camera positioning
+                world.pointOfView({ lat: 39.8, lng: -98.5, altitude: 2 }, 1000);
+            })
+            .catch(err => {
+                console.error("Could not load results.json. Using fallback mock data.", err);
+                const mock = [
+                    { airport: "ATL", pagerank: 1.0, component_id: 0, lat: 33.6407, lng: -84.4277 },
+                    { airport: "DFW", pagerank: 0.8, component_id: 0, lat: 32.8998, lng: -97.0403 },
+                    { airport: "DEN", pagerank: 0.7, component_id: 1, lat: 39.8561, lng: -104.6737 }
+                ];
+                world.hexBinPointsData(mock);
+            });
+
+        // Add some subtle atmosphere
+        world.controls().autoRotate = true;
+        world.controls().autoRotateSpeed = 0.5;
+        world.controls().enableDamping = true;
+        world.controls().dampingFactor = 0.05;
+
+    </script>
+</body>
+</html>

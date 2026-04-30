@@ -1,0 +1,4 @@
+Tier,Wall-Clock Time (s),Peak RAM Usage (MB)
+Tier 1 (540K Rows),364,480
+Tier 2 (3.5M Rows),1200,1850
+Tier 3 (7.2M Rows),4500,4200

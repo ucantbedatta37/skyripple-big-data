@@ -1,0 +1,4 @@
+Method,Memory (KB),Accuracy (%)
+Exact (Shuffle),256000,100.0
+HyperLogLog (HLL),12,98.4
+Count-Min Sketch (CMS),20,99.1

@@ -1,0 +1,27 @@
+================================================================================
+DATA 228 - SCALABILITY TEST RESULTS — TIER 1
+================================================================================
+Timestamp:            Mon Mar 30 20:04:52 PDT 2026
+
+--- Timing (seconds) ---
+Kafka Produce:        35.09s
+Spark Streaming ETL:  364.94s
+GraphX Analytics:     32.79s
+Experiments (HLL/CMS/DP/LSH): 151.82s
+TOTAL Wall-Clock:     584.88s
+
+--- Throughput ---
+Records accepted:     37847
+ETL Throughput:       103.7 records/sec
+
+--- Output Sizes ---
+Curated Parquet:      11M
+GraphX Results:       92K
+
+--- ETL Stats ---
+[stream-etl] batch_id=5 total=38082 accepted=37847 dupes=235
+
+--- GraphX Stats ---
+[Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                          (0 + 6) / 6]                                                                                [Stage 9:>                  (0 + 1) / 1][Stage 10:>                 (0 + 1) / 1]                                                                                [graphx] airports=329 edges=5646 topK=20 pagerankIters=10
+
+================================================================================

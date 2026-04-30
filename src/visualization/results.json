@@ -1,0 +1,142 @@
+[
+  {
+    "airport": "DEN",
+    "pagerank": 11.37308206733485,
+    "component_id": 0,
+    "lat": 39.8561,
+    "lng": -104.6737
+  },
+  {
+    "airport": "DFW",
+    "pagerank": 10.730280761355118,
+    "component_id": 0,
+    "lat": 32.8998,
+    "lng": -97.0403
+  },
+  {
+    "airport": "ORD",
+    "pagerank": 9.950490774531453,
+    "component_id": 0,
+    "lat": 41.9742,
+    "lng": -87.9073
+  },
+  {
+    "airport": "ATL",
+    "pagerank": 6.902222706840532,
+    "component_id": 0,
+    "lat": 33.6407,
+    "lng": -84.4277
+  },
+  {
+    "airport": "CLT",
+    "pagerank": 6.406271704200211,
+    "component_id": 0,
+    "lat": 35.214,
+    "lng": -80.9431
+  },
+  {
+    "airport": "MSP",
+    "pagerank": 6.2032946533499125,
+    "component_id": 0,
+    "lat": 44.8848,
+    "lng": -93.2223
+  },
+  {
+    "airport": "LAS",
+    "pagerank": 5.655518267004175,
+    "component_id": 0,
+    "lat": 36.084,
+    "lng": -115.1537
+  },
+  {
+    "airport": "IAH",
+    "pagerank": 5.156714698843822,
+    "component_id": 0,
+    "lat": 29.9902,
+    "lng": -95.3368
+  },
+  {
+    "airport": "PHX",
+    "pagerank": 5.121592222140022,
+    "component_id": 0,
+    "lat": 33.4352,
+    "lng": -112.0101
+  },
+  {
+    "airport": "DTW",
+    "pagerank": 4.8358729267629785,
+    "component_id": 0,
+    "lat": 42.2124,
+    "lng": -83.3533
+  },
+  {
+    "airport": "SLC",
+    "pagerank": 4.6953292228821395,
+    "component_id": 0,
+    "lat": 40.7899,
+    "lng": -111.9791
+  },
+  {
+    "airport": "LAX",
+    "pagerank": 4.636588070543534,
+    "component_id": 0,
+    "lat": 33.9416,
+    "lng": -118.4085
+  },
+  {
+    "airport": "DCA",
+    "pagerank": 4.381157432133916,
+    "component_id": 0,
+    "lat": 38.8512,
+    "lng": -77.0402
+  },
+  {
+    "airport": "SEA",
+    "pagerank": 4.262329524692907,
+    "component_id": 0,
+    "lat": 47.4502,
+    "lng": -122.3088
+  },
+  {
+    "airport": "FLL",
+    "pagerank": 4.214073887504258,
+    "component_id": 0,
+    "lat": 26.0742,
+    "lng": -80.1506
+  },
+  {
+    "airport": "BNA",
+    "pagerank": 4.158042920161078,
+    "component_id": 0,
+    "lat": 36.1263,
+    "lng": -86.6774
+  },
+  {
+    "airport": "EWR",
+    "pagerank": 3.869021558403471,
+    "component_id": 0,
+    "lat": 40.6895,
+    "lng": -74.1745
+  },
+  {
+    "airport": "MIA",
+    "pagerank": 3.7943498453635423,
+    "component_id": 0,
+    "lat": 25.7959,
+    "lng": -80.287
+  },
+  {
+    "airport": "MCO",
+    "pagerank": 3.765054816109873,
+    "component_id": 0,
+    "lat": 28.4312,
+    "lng": -81.3081
+  },
+  {
+    "airport": "SFO",
+    "pagerank": 3.571887602037313,
+    "component_id": 0,
+    "lat": 37.6213,
+    "lng": -122.379
+  }
+]

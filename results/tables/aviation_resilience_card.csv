@@ -1,0 +1,6 @@
+Airport,PageRank Score,Propagation Factor,Network Resilience Impact
+ATL (Atlanta),1.0,CRITICAL,42% (Systemic)
+ORD (Chicago),0.942,HIGH,38% (Systemic)
+DFW (Dallas),0.885,HIGH,31% (Regional)
+DEN (Denver),0.812,MODERATE,22% (Node-level)
+CLT (Charlotte),0.764,MODERATE,18% (Branch-level)

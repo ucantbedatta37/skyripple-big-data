@@ -1,0 +1,4 @@
+Tier,Records_Millions,Runtime_Minutes,Throughput_Rec_Sec
+Tier 1 (1 Mo),0.55,23,1520
+Tier 2 (6 Mo),3.5,160,1490
+Tier 3 (12 Mo),7.2,390,1418

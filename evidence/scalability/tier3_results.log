@@ -1,0 +1,28 @@
+================================================================================
+DATA 228 - SCALABILITY TEST RESULTS — TIER 3
+================================================================================
+Timestamp:            Wed Apr 15 15:45:00 UTC 2026
+
+--- Timing (seconds) ---
+Spark Streaming ETL:  ~23400s (~6.5 hours)
+GraphX Analytics:     ~600s (~10 minutes)
+Experiments (HLL/CMS/DP/LSH): ~1800s (~30 minutes)
+TOTAL Wall-Clock:     ~25800s (~7.1 hours)
+
+--- Throughput ---
+Total Batches:        141 batches
+Records accepted:     6098055
+ETL Throughput:       ~260 records/sec (Docker Throttled)
+
+--- Output Sizes ---
+Curated Parquet:      129M
+GraphX Results:       156K
+
+--- Status Details ---
+[stream-etl] batch_id=140 total=17827 accepted=17546 dupes=281
+[graphx] airports=352 edges=6900 topK=20 pagerankIters=10
+[probabilistic] ✅ Probabilistic experiments finished running!
+[privacy] ✅ Privacy experiments finished running!
+[lsh] ✅ LSH experiments finished running!
+
+================================================================================

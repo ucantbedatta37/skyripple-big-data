@@ -1,0 +1,101 @@
+flight_id,origin,destination,time_block,delay_bin,delay_cause
+HNL|SAN|WN|3029|2025-7-12|1220,HNL,SAN,Afternoon (12-16),0-15 min,on_time_or_no_cause
+CMH|HOU|WN|3032|2025-7-12|1535,CMH,HOU,Afternoon (12-16),75-90 min,weather
+DEN|RNO|WN|3033|2025-7-12|900,DEN,RNO,Morning (08-12),0-15 min,on_time_or_no_cause
+SAN|DEN|WN|3034|2025-7-12|1400,SAN,DEN,Afternoon (12-16),30-45 min,late_aircraft
+SMF|SAN|WN|3034|2025-7-12|1150,SMF,SAN,Morning (08-12),30-45 min,carrier
+HNL|SJC|WN|3035|2025-7-12|1305,HNL,SJC,Afternoon (12-16),0-15 min,on_time_or_no_cause
+BWI|SFO|WN|3036|2025-7-12|1740,BWI,SFO,Evening (16-20),0-15 min,on_time_or_no_cause
+BNA|DCA|WN|3040|2025-7-12|1800,BNA,DCA,Evening (16-20),165-180 min,nas
+LGB|BNA|WN|3040|2025-7-12|1125,LGB,BNA,Morning (08-12),0-15 min,on_time_or_no_cause
+BUF|MDW|WN|3041|2025-7-12|620,BUF,MDW,Early Morning (04-08),0-15 min,on_time_or_no_cause
+MDW|SAT|WN|3041|2025-7-12|740,MDW,SAT,Early Morning (04-08),0-15 min,on_time_or_no_cause
+MCO|BNA|WN|3044|2025-7-12|2135,MCO,BNA,Night (20-24),60-75 min,late_aircraft
+MCO|PHL|WN|3045|2025-7-12|1550,MCO,PHL,Afternoon (12-16),315-330 min,carrier
+PHL|MDW|WN|3045|2025-7-12|1910,PHL,MDW,Evening (16-20),330-345 min,late_aircraft
+PHX|SMF|WN|3046|2025-7-12|2150,PHX,SMF,Night (20-24),15-30 min,on_time_or_no_cause
+HOU|DCA|WN|3047|2025-7-12|1110,HOU,DCA,Morning (08-12),0-15 min,on_time_or_no_cause
+STL|LAS|WN|3048|2025-7-12|1410,STL,LAS,Afternoon (12-16),15-30 min,on_time_or_no_cause
+BNA|RSW|WN|3049|2025-7-12|1955,BNA,RSW,Evening (16-20),0-15 min,on_time_or_no_cause
+PWM|BWI|WN|3054|2025-7-12|530,PWM,BWI,Early Morning (04-08),0-15 min,on_time_or_no_cause
+HOU|ECP|WN|3056|2025-7-12|1010,HOU,ECP,Morning (08-12),0-15 min,on_time_or_no_cause
+DEN|MKE|WN|3057|2025-7-12|735,DEN,MKE,Early Morning (04-08),15-30 min,carrier
+LAS|SMF|WN|3058|2025-7-12|1500,LAS,SMF,Afternoon (12-16),60-75 min,late_aircraft
+SLC|LAS|WN|3058|2025-7-12|1355,SLC,LAS,Afternoon (12-16),45-60 min,late_aircraft
+HOU|MCO|WN|3059|2025-7-12|540,HOU,MCO,Early Morning (04-08),0-15 min,on_time_or_no_cause
+LAS|OAK|WN|3060|2025-7-12|845,LAS,OAK,Morning (08-12),15-30 min,on_time_or_no_cause
+MCO|IND|WN|3061|2025-7-12|1405,MCO,IND,Afternoon (12-16),0-15 min,on_time_or_no_cause
+ATL|BWI|WN|3062|2025-7-12|1900,ATL,BWI,Evening (16-20),60-75 min,nas
+DEN|ABQ|WN|3065|2025-7-12|2140,DEN,ABQ,Night (20-24),15-30 min,on_time_or_no_cause
+HOU|IND|WN|3069|2025-7-12|1500,HOU,IND,Afternoon (12-16),15-30 min,late_aircraft
+BDL|MDW|WN|3070|2025-7-12|720,BDL,MDW,Early Morning (04-08),0-15 min,on_time_or_no_cause
+BNA|DEN|WN|3071|2025-7-12|1140,BNA,DEN,Morning (08-12),0-15 min,on_time_or_no_cause
+HOU|JAX|WN|3073|2025-7-12|1110,HOU,JAX,Morning (08-12),15-30 min,on_time_or_no_cause
+ATL|STL|WN|3076|2025-7-12|2050,ATL,STL,Night (20-24),75-90 min,carrier
+DEN|LGB|WN|3077|2025-7-12|1835,DEN,LGB,Evening (16-20),0-15 min,on_time_or_no_cause
+BWI|BDL|WN|3079|2025-7-12|2205,BWI,BDL,Night (20-24),60-75 min,late_aircraft
+MDW|HOU|WN|3080|2025-7-12|840,MDW,HOU,Morning (08-12),0-15 min,on_time_or_no_cause
+STL|LAX|WN|3082|2025-7-12|835,STL,LAX,Morning (08-12),0-15 min,on_time_or_no_cause
+MSY|HOU|WN|3083|2025-7-12|530,MSY,HOU,Early Morning (04-08),0-15 min,on_time_or_no_cause
+HRL|HOU|WN|3085|2025-7-12|925,HRL,HOU,Morning (08-12),0-15 min,on_time_or_no_cause
+HOU|MIA|WN|3086|2025-7-12|1955,HOU,MIA,Evening (16-20),45-60 min,late_aircraft
+MDW|OMA|WN|3088|2025-7-12|1100,MDW,OMA,Morning (08-12),0-15 min,on_time_or_no_cause
+OMA|DEN|WN|3088|2025-7-12|1315,OMA,DEN,Afternoon (12-16),0-15 min,on_time_or_no_cause
+MCO|SAT|WN|3089|2025-7-12|1620,MCO,SAT,Evening (16-20),30-45 min,weather
+COS|DAL|WN|309|2025-7-12|1615,COS,DAL,Evening (16-20),0-15 min,nas
+DAL|BWI|WN|309|2025-7-12|1940,DAL,BWI,Evening (16-20),75-90 min,weather
+HOU|MDW|WN|3090|2025-7-12|2030,HOU,MDW,Night (20-24),0-15 min,on_time_or_no_cause
+SJU|MCO|WN|3091|2025-7-12|1140,SJU,MCO,Morning (08-12),0-15 min,on_time_or_no_cause
+MDW|PHX|WN|3092|2025-7-12|1555,MDW,PHX,Afternoon (12-16),0-15 min,on_time_or_no_cause
+BNA|PNS|WN|3093|2025-7-12|1420,BNA,PNS,Afternoon (12-16),15-30 min,late_aircraft
+DAL|LAS|WN|3093|2025-7-12|1850,DAL,LAS,Evening (16-20),15-30 min,on_time_or_no_cause
+LAS|OAK|WN|3093|2025-7-12|2015,LAS,OAK,Night (20-24),15-30 min,on_time_or_no_cause
+PNS|DAL|WN|3093|2025-7-12|1620,PNS,DAL,Evening (16-20),15-30 min,late_aircraft
+HOU|MAF|WN|3094|2025-7-12|1500,HOU,MAF,Afternoon (12-16),0-15 min,nas
+HOU|MAF|WN|3095|2025-7-12|2205,HOU,MAF,Night (20-24),15-30 min,carrier
+FLL|STL|WN|3096|2025-7-12|550,FLL,STL,Early Morning (04-08),0-15 min,on_time_or_no_cause
+DAL|HOU|WN|31|2025-7-12|1400,DAL,HOU,Afternoon (12-16),0-15 min,carrier
+SEA|HOU|WN|310|2025-7-12|2240,SEA,HOU,Night (20-24),45-60 min,late_aircraft
+DAL|ORD|WN|3100|2025-7-12|1940,DAL,ORD,Evening (16-20),15-30 min,nas
+ELP|DAL|WN|3100|2025-7-12|1615,ELP,DAL,Evening (16-20),0-15 min,nas
+BNA|PDX|WN|3101|2025-7-12|1750,BNA,PDX,Evening (16-20),0-15 min,on_time_or_no_cause
+BWI|BNA|WN|3101|2025-7-12|1615,BWI,BNA,Evening (16-20),0-15 min,on_time_or_no_cause
+PDX|SJC|WN|3101|2025-7-12|2110,PDX,SJC,Night (20-24),0-15 min,on_time_or_no_cause
+SAN|BWI|WN|3101|2025-7-12|725,SAN,BWI,Early Morning (04-08),0-15 min,on_time_or_no_cause
+LAX|HOU|WN|3102|2025-7-12|1320,LAX,HOU,Afternoon (12-16),0-15 min,on_time_or_no_cause
+SMF|LAX|WN|3103|2025-7-12|1355,SMF,LAX,Afternoon (12-16),0-15 min,on_time_or_no_cause
+HOU|MDW|WN|3104|2025-7-12|600,HOU,MDW,Early Morning (04-08),0-15 min,on_time_or_no_cause
+HRL|HOU|WN|3106|2025-7-12|530,HRL,HOU,Early Morning (04-08),0-15 min,on_time_or_no_cause
+MEM|MCO|WN|3109|2025-7-12|520,MEM,MCO,Early Morning (04-08),0-15 min,on_time_or_no_cause
+DAL|ECP|WN|311|2025-7-12|755,DAL,ECP,Early Morning (04-08),0-15 min,on_time_or_no_cause
+SRQ|BNA|WN|3110|2025-7-12|1100,SRQ,BNA,Morning (08-12),0-15 min,on_time_or_no_cause
+BDL|BWI|WN|3111|2025-7-12|1245,BDL,BWI,Afternoon (12-16),15-30 min,nas
+DAL|LAX|WN|3112|2025-7-12|1605,DAL,LAX,Evening (16-20),0-15 min,on_time_or_no_cause
+MCO|DAL|WN|3112|2025-7-12|1340,MCO,DAL,Afternoon (12-16),0-15 min,on_time_or_no_cause
+DAL|MDW|WN|3113|2025-7-12|2110,DAL,MDW,Night (20-24),0-15 min,on_time_or_no_cause
+HOU|MSY|WN|3117|2025-7-12|730,HOU,MSY,Early Morning (04-08),0-15 min,on_time_or_no_cause
+LAX|SMF|WN|3118|2025-7-12|1150,LAX,SMF,Morning (08-12),0-15 min,on_time_or_no_cause
+MSY|LAX|WN|3119|2025-7-12|1955,MSY,LAX,Evening (16-20),15-30 min,on_time_or_no_cause
+BUF|DEN|WN|3120|2025-7-12|515,BUF,DEN,Early Morning (04-08),0-15 min,on_time_or_no_cause
+BDL|MDW|WN|3123|2025-7-12|1905,BDL,MDW,Evening (16-20),0-15 min,nas
+BWI|BDL|WN|3123|2025-7-12|1700,BWI,BDL,Evening (16-20),15-30 min,on_time_or_no_cause
+DEN|SLC|WN|3125|2025-7-12|1515,DEN,SLC,Afternoon (12-16),0-15 min,on_time_or_no_cause
+BWI|CLE|WN|3129|2025-7-12|2155,BWI,CLE,Night (20-24),60-75 min,late_aircraft
+DCA|ATL|WN|313|2025-7-12|1100,DCA,ATL,Morning (08-12),0-15 min,on_time_or_no_cause
+PHX|ATL|WN|3133|2025-7-12|840,PHX,ATL,Morning (08-12),0-15 min,on_time_or_no_cause
+HOU|PHX|WN|3134|2025-7-12|835,HOU,PHX,Morning (08-12),0-15 min,on_time_or_no_cause
+CLT|DAL|WN|3135|2025-7-12|1755,CLT,DAL,Evening (16-20),30-45 min,on_time_or_no_cause
+HOU|PHX|WN|3136|2025-7-12|1515,HOU,PHX,Afternoon (12-16),0-15 min,on_time_or_no_cause
+LGA|MDW|WN|3137|2025-7-12|1740,LGA,MDW,Evening (16-20),45-60 min,nas
+BNA|CHS|WN|3138|2025-7-12|1720,BNA,CHS,Evening (16-20),0-15 min,on_time_or_no_cause
+AUS|SMF|WN|314|2025-7-12|1955,AUS,SMF,Evening (16-20),15-30 min,late_aircraft
+ECP|BNA|WN|3140|2025-7-12|1940,ECP,BNA,Evening (16-20),15-30 min,on_time_or_no_cause
+HOU|ECP|WN|3140|2025-7-12|1720,HOU,ECP,Evening (16-20),30-45 min,late_aircraft
+OMA|HOU|WN|3140|2025-7-12|1430,OMA,HOU,Afternoon (12-16),15-30 min,nas
+LGB|HOU|WN|3141|2025-7-12|900,LGB,HOU,Morning (08-12),0-15 min,on_time_or_no_cause
+LAS|LGB|WN|3143|2025-7-12|930,LAS,LGB,Morning (08-12),0-15 min,on_time_or_no_cause
+RDU|LAS|WN|3143|2025-7-12|655,RDU,LAS,Early Morning (04-08),0-15 min,on_time_or_no_cause
+TPA|MDW|WN|3145|2025-7-12|645,TPA,MDW,Early Morning (04-08),0-15 min,on_time_or_no_cause
+TUL|DAL|WN|3146|2025-7-12|535,TUL,DAL,Early Morning (04-08),150-165 min,weather
+CMH|TPA|WN|3147|2025-7-12|600,CMH,TPA,Early Morning (04-08),0-15 min,on_time_or_no_cause
+MIA|HOU|WN|3148|2025-7-12|510,MIA,HOU,Early Morning (04-08),0-15 min,on_time_or_no_cause

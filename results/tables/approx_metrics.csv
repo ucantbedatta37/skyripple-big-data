@@ -1,0 +1,4 @@
+Algorithm,Memory_Usage_KB,Accuracy_Percent
+Bloom Filter,2000,99.9
+HyperLogLog,12,96.2
+Count-Min Sketch,100,98.7
